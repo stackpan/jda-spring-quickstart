@@ -144,7 +144,7 @@ public class ExtensionRegister implements Consumer<ExtensionsBuilder>, Applicati
 
 see [BotCommands/writing-extensions/Constructor-injection](https://freya022.github.io/BotCommands/2.X/writing-extensions/Constructor-injection/)
 
-## Additional Information
+## Resources
 
 - [Spring.io](https://spring.io)
 - [JDA wiki](https://jda.wiki)
