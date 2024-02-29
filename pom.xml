@@ -8,7 +8,7 @@
         <version>3.2.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.stackpan.archetype</groupId>
+    <groupId>io.github.stackpan.archetype</groupId>
     <artifactId>jda-spring-quickstart</artifactId>
     <version>0.0.1</version>
     <name>jda-spring-quickstart</name>
@@ -18,7 +18,7 @@
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
 

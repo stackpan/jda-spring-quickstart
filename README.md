@@ -22,16 +22,13 @@ This archetype is includes these libraries:
 
 ## Installation
 
-Use Maven Archetype Generator and find archetype:
-
-- Group ID: `com.stackpan.archetype`
-- Artifact ID: `jda-spring-quickstart-archetype`
+Use Maven Archetype Generator and find archetype with coordinate: `io.github.stackpan.archetype:jda-spring-quickstart-archetype`
 
 Described as this command:
 
 ```shell
 mvn archetype:generate \                                 
-  -DarchetypeGroupId=com.stackpan.archetype \
+  -DarchetypeGroupId=io.github.stackpan.archetype \
   -DarchetypeArtifactId=jda-spring-quickstart-archetype \
   -DarchetypeVersion={version} \
   -DgroupId={your.project.group.id} \
@@ -51,7 +48,7 @@ your-project
 └── src
     └── main
         ├── java
-        │   └── {packageGroupId}
+        │   └── {package}
         │       ├── command  // Commands definition and handler
         │       ├── configuration // Application configurations
         │       ├── discord  // Additional discord configurations
@@ -85,10 +82,10 @@ discord.bot-token=<YOUR_DISCORD_BOT_TOKEN>
 
 #### JDA Instance
 
-We have defined `JDA` instance bean configuration inside `{packageGroupId}.configuration.DiscordConfigurer` class. You can define your own configuration inside `DiscordConfigurer.jda()` bean method configuration:
+We have defined `JDA` instance bean configuration inside `{package}.configuration.DiscordConfigurer` class. You can define your own configuration inside `DiscordConfigurer.jda()` bean method configuration:
 
 ```java
-// File: src/main/java/{packageGroupId}/configuration/DiscordConfigurer.java
+// File: src/main/java/{package}/configuration/DiscordConfigurer.java
 
 @Bean
 public JDA jda() throws InterruptedException {
@@ -103,7 +100,7 @@ see [JDABuilder Javadocs](https://docs.jda.wiki/net/dv8tion/jda/api/JDABuilder.h
 This archetype uses **freya022/BotCommands** framework to easily manage your bot commands, but this has an issue when injecting your bean from Spring IoC Container into command classes. For example:
 
 ```java
-// File: src/main/java/{packageGroupId}/command/ExampleCommand.java
+// File: src/main/java/{package}/command/ExampleCommand.java
 
 @CommandMarker
 @RequiredArgsConstructor
@@ -122,10 +119,10 @@ public class ExampleCommand extends ApplicationCommand {
 
 When you declare your bean inside your `ApplicationCommand` classes, an error will occur when starting the app. This is happened because `ApplicationCommand` classes dependencies cannot resolve your bean dependencies.
 
-To address this issue, you need to register your bean as extension from Spring `ApplicationContext` inside `{packageGroupId}.configuration.DiscordConfigurer` class:
+To address this issue, you need to register your bean as command extension from Spring `ApplicationContext` inside `{package}.configuration.DiscordConfigurer` class:
 
 ```java
-// File: src/main/java/{packageGroupId}/discord/ExtensionRegister.java
+// File: src/main/java/{package}/discord/ExtensionRegister.java
 
 @Component
 public class ExtensionRegister implements Consumer<ExtensionsBuilder>, ApplicationContextAware {

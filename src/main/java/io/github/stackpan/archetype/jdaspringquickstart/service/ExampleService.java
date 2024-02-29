@@ -1,4 +1,4 @@
-package com.stackpan.jdaspringquickstart.service;
+package io.github.stackpan.archetype.jdaspringquickstart.service;
 
 import org.springframework.stereotype.Service;
 

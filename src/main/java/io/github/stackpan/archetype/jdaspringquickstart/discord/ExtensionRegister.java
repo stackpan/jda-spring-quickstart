@@ -1,7 +1,7 @@
-package com.stackpan.jdaspringquickstart.discord;
+package io.github.stackpan.archetype.jdaspringquickstart.discord;
 
 import com.freya02.botcommands.api.builder.ExtensionsBuilder;
-import com.stackpan.jdaspringquickstart.service.ExampleService;
+import io.github.stackpan.archetype.jdaspringquickstart.service.ExampleService;
 import lombok.Setter;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;

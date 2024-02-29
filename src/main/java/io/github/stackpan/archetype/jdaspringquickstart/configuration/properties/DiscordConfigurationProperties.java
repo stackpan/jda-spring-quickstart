@@ -1,4 +1,4 @@
-package com.stackpan.jdaspringquickstart.configuration.properties;
+package io.github.stackpan.archetype.jdaspringquickstart.configuration.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

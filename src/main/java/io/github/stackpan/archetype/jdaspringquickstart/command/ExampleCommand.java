@@ -1,11 +1,11 @@
-package com.stackpan.jdaspringquickstart.command;
+package io.github.stackpan.archetype.jdaspringquickstart.command;
 
 import com.freya02.botcommands.api.annotations.CommandMarker;
 import com.freya02.botcommands.api.application.ApplicationCommand;
 import com.freya02.botcommands.api.application.CommandScope;
 import com.freya02.botcommands.api.application.slash.GlobalSlashEvent;
 import com.freya02.botcommands.api.application.slash.annotations.JDASlashCommand;
-import com.stackpan.jdaspringquickstart.service.ExampleService;
+import io.github.stackpan.archetype.jdaspringquickstart.service.ExampleService;
 import lombok.RequiredArgsConstructor;
 
 @CommandMarker
