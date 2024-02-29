@@ -27,7 +27,7 @@ Use Maven Archetype Generator and find archetype with coordinate: `io.github.sta
 Described as this command:
 
 ```shell
-mvn archetype:generate \                                 
+mvn archetype:generate \
   -DarchetypeGroupId=io.github.stackpan.archetype \
   -DarchetypeArtifactId=jda-spring-quickstart-archetype \
   -DarchetypeVersion={version} \
@@ -57,15 +57,15 @@ your-project
         └── resources
             └── application.properties
 ```
-Example of its use are also provided in the generated project.
+Example of its uses are provided in the generated project.
 
-First thing you must do is to configure your Discord bot token. Place your token inside `src/main/resource/application.properties` file:
+First thing you must to do is to configure your Discord bot token. Place your token inside `src/main/resource/application.properties` file:
 
 ```properties
 discord.bot-token=<YOUR_DISCORD_BOT_TOKEN>
 ```
 
-To running the application, use this command:
+To run the application, use this command:
 ```shell
 ./mvnw spring-boot:run
 ```
