@@ -23,7 +23,7 @@ public class DiscordConfigurer {
 
         jda.awaitReady();
         CommandsBuilder.newBuilder()
-                .extensionsBuilder(extensionRegister)
+                .extensionsBuilder(extensionRegister) // Don't remove this! This is necessary for registering your beans
                 .build(jda, "com.stackpan.jdaspringquickstart.command");
 
         return jda;

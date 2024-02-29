@@ -7,7 +7,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 @Component
@@ -16,6 +15,11 @@ public class ExtensionRegister implements Consumer<ExtensionsBuilder>, Applicati
     @Setter
     private ApplicationContext applicationContext;
 
+    /**
+     * Register your beans here, so it can be injected into your commands classes
+     *
+     * @param extensionsBuilder the input argument
+     */
     @Override
     public void accept(ExtensionsBuilder extensionsBuilder) {
         extensionsBuilder

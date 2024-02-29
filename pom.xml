@@ -8,11 +8,11 @@
         <version>3.2.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.stackpan</groupId>
+    <groupId>com.stackpan.archetype</groupId>
     <artifactId>jda-spring-quickstart</artifactId>
     <version>0.0.1</version>
     <name>jda-spring-quickstart</name>
-    <description>Starter project template for building JDA Discord App with Spring Boot</description>
+    <description>Starter project for building JDA Discord app with Spring Boot</description>
     <url>https://github.com/stackpan/jda-spring-quickstart</url>
 
     <properties>
