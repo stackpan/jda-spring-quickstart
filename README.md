@@ -52,7 +52,7 @@ your-project
     └── main
         ├── java
         │   └── {packageGroupId}
-        │       ├── command  // Commands registerer and handler
+        │       ├── command  // Commands definition and handler
         │       ├── configuration // Application configurations
         │       ├── discord  // Additional discord configurations
         │       ├── service  // Application logic
