@@ -2,7 +2,7 @@
 
 Starter project for building JDA Discord bot app with Spring
 
-This archetype is includes these libraries:
+This archetype is including these libraries:
 
 - **Spring Framework & Spring Boot**
 
@@ -119,7 +119,7 @@ public class ExampleCommand extends ApplicationCommand {
 
 When you declare your bean inside your `ApplicationCommand` classes, an error will occur when starting the app. This is happened because `ApplicationCommand` classes dependencies cannot resolve your bean dependencies.
 
-To address this issue, you need to register your bean as command extension from Spring `ApplicationContext` inside `{package}. discord.ExtensionRegister` class:
+To address this issue, you need to register your bean as command extension from Spring `ApplicationContext` inside `{package}.discord.ExtensionRegister` class:
 
 ```java
 // File: src/main/java/{package}/discord/ExtensionRegister.java
